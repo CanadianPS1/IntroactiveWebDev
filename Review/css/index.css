@@ -1,0 +1,35 @@
+section{
+    color: blue;
+    text-align: center;
+}
+div{
+    color :purple;
+    border-radius: 100%;
+    border-color: aquamarine;
+    border: solid 0.3rem;
+    text-align: center;
+}
+header{
+    text-align: right;
+}
+p{
+    text-align: left;
+}
+footer{
+    text-align: right;
+}
+span{
+    text-align: center;
+}
+.first{
+    text-align: left;
+    size: 5rem;
+}
+input{
+    border: dotted 0.3rem ;
+    border-color: steelblue;
+    border-radius: 60%;
+    border-width: 1rem;
+    width: 20rem;
+    color: green;
+}
