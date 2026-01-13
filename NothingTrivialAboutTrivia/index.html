@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <div class="background">
+        <head>
+            <title>Nothing Trivial about Trivia</title>
+            <link rel="stylesheet" href="./css/index.css">
+        </head>
+        <body>
+            <header>
+                <nav>
+                    <a href="index.html" class="homeButton">Home</a>
+                </nav>
+            </header>
+            <h1 class="title">TRIVIA</h1>
+            <h2 class="triviaFormater">
+                    <ul>
+                        <div class="l1">
+                            Number of Questions
+                            <input id="amountOfQuestions" class="amountOfQuestions" type="number" name="amountOfQuestions" min=1 max="50" value="10">
+                        </div>
+                        <div class="l2">
+                            Difficulty
+                            <select name="difficulty" id="difficulty" class="textBox">
+                                <option value="easy" class="textBox">Easy</option>
+                                <option value="medium" class="textBox">Medium</option>
+                                <option value="hard" class="textBox">Hard</option>
+                            </select>
+                        </div>
+                        <div class="l3">
+                            <Button class="playButton" id="playButton">PLAY</Button>
+                        </div>
+                    </ul>
+            </h2>
+            
+            <section class="trivia">
+                <div class="triviaBox">
+                    <p class="triviaTitleCard">Video Game Trivia</p>
+                    <p class="questionNumberDisplay" id="questionNumberText">Question #</p>
+                    <p class="question" id="question">Question</p>
+                    <p class="answers" id="answers">Answers</p>
+                </div>
+            </section>
+
+        </body>
+        <footer class="footer">
+                Copyright ©2026 by Lia Roeback
+        </footer>
+    </div>
+   <script src="js\index.js"></script>
+</html>
