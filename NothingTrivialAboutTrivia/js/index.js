@@ -1,19 +1,28 @@
 const playButton = document.getElementById("playButton");
-const inputField = document.getElementById("input")
-const guessButton = document.getElementById("guessButton")
+const inputField = document.getElementById("input");
+const guessButton = document.getElementById("guessButton");
+const nextButton = document.getElementById("nextButton");
 let jsonData;
 let iterationCount = 0;
 playButton.addEventListener("click", () =>{
+    QuestionAnswered = false;
     GetQuestions();
 });
 guessButton.addEventListener("click", () =>{
-    PoseQuestions()
+    QuestionAnswered = true;
+    Guess();
 });
+nextButton.addEventListener("click", () =>{
+    QuestionAnswered = false;
+    iterationCount = iterationCount + 1;
+    PoseQuestions(iterationCount);
+})
 async function GetQuestions(){
     const amountOfQuestions = document.getElementById("amountOfQuestions").value;
     const difficulty = document.getElementById("difficulty").value;
     const url = `https://opentdb.com/api.php?amount=${amountOfQuestions}&category=15&difficulty=${difficulty}&type=multiple`
     fetch(url).then(response => response.json()).then(data => {
+        iterationCount = 0;
         jsonData = data;
         PoseQuestions(iterationCount);
     });
@@ -21,6 +30,7 @@ async function GetQuestions(){
 function PoseQuestions(i){
     inputField.style.visibility = "visible";
     guessButton.style.visibility = "visible";
+    nextButton.style.visibility = "visible";
     const questionNum = i + 1;
     const questionNumber = `Question #${questionNum}`;
     document.getElementById("questionNumberText").textContent = (questionNumber);
@@ -32,5 +42,7 @@ function PoseQuestions(i){
     document.getElementById("question").textContent = (question);
     document.getElementById("answers").textContent = (`(a) ${answers[0]}\n(b) ${answers[1]}\n(c) ${answers[2]}\n(d) ${answers[3]}`);
     console.log(correctAnswer);
-    iterationCount++;
+}
+function Guess(){
+
 }

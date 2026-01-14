@@ -122,3 +122,12 @@ header{
     margin-top: 3rem;
     margin-right: 0;
 }
+.nextButton{
+    visibility: hidden;
+    background-color: rgb(196, 196, 196);
+    color: black;
+    margin-top: 4rem;
+    height: 3rem;
+    width: 5rem;
+    border-radius: 5rem;
+}
