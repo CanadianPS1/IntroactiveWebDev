@@ -65,11 +65,11 @@ header{
 }
 .triviaBox{
     height: 50rem;
-    width: 40rem;
+    width: 20%;
     background: linear-gradient(to top right, rgb(143, 60, 18), coral);
     border-radius: 5rem;
-    margin-left: 32%;
-    margin-bottom: 10rem;
+    margin-left: 40%;
+    margin-bottom: 15rem;
     text-align: center;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -126,8 +126,15 @@ header{
     visibility: hidden;
     background-color: rgb(196, 196, 196);
     color: black;
-    margin-top: 4rem;
+    margin-top: 3rem;
     height: 3rem;
     width: 5rem;
     border-radius: 5rem;
+}
+.correctAnswerDisplay{
+    margin-top: 1rem;
+}
+.scoreCard{
+    visibility: hidden;
+    margin-bottom: 2rem;
 }
