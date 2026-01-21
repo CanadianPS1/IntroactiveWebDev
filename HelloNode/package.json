@@ -1,0 +1,26 @@
+{
+  "name": "HelloNode",
+  "version": "1.0.0",
+  "description": "YES",
+  "keywords": [
+    "hello",
+    "really",
+    "cool",
+    "gunch"
+  ],
+  "homepage": "https://github.com/CanadianPS1/IntroactiveWebDev/HelloNode#readme",
+  "bugs": {
+    "url": "https://github.com/CanadianPS1/IntroactiveWebDev/HelloNode/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CanadianPS1/IntroactiveWebDev/HelloNode.git"
+  },
+  "license": "ISC",
+  "author": "Lia",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
