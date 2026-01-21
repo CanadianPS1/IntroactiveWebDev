@@ -10,11 +10,11 @@
   ],
   "homepage": "https://github.com/CanadianPS1/IntroactiveWebDev/HelloNode#readme",
   "bugs": {
-    "url": "https://github.com/CanadianPS1/IntroactiveWebDev/HelloNode/issues"
+    "url": "https://github.com/CanadianPS1/IntroactiveWebDev/tree/main/HelloNodeissues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CanadianPS1/IntroactiveWebDev/HelloNode.git"
+    "url": "git+https://github.com/CanadianPS1/IntroactiveWebDev/tree/main/HelloNode.git"
   },
   "license": "ISC",
   "author": "Lia",
