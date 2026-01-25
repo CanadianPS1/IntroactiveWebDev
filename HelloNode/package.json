@@ -23,5 +23,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
+  },
+  "dependencies": {
+    "002-cli-number-guessing-game": "^1.0.0",
+    "hello": "^0.6.2",
+    "hubot-coin": "^0.0.2"
   }
 }
