@@ -5,9 +5,11 @@ const app = express();
 const PORT = 9001;
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+app.use(express.json());
+app.use(express.urlencoded());
 app.get("/", (req, res) => {
     console.log("<html>Get: homepage</html>");
-    let quoteFromDb = "'Me Fial english.... thats unpossible'"
+    let quoteFromDb = "'Talk about getting some Tail' - Gex"
     let model = {
         qotd: quoteFromDb
     };
@@ -23,7 +25,8 @@ app.get("/contact-me", (req, res) => {
     res.render("contact");
 });
 app.post("/contact-me", (req, res) => {
-    
+    let body = req.body;
+    res.redirect("/")
 });
 app.listen(PORT, () => {
     console.log("espress running on pork:" + PORT);
