@@ -27,6 +27,7 @@ app.get("/contact-me", (req, res) => {
 app.post("/contact-me", (req, res) => {
     let body = req.body;
     res.redirect("/")
+    console.log("Body" + body);
 });
 app.listen(PORT, () => {
     console.log("espress running on pork:" + PORT);
