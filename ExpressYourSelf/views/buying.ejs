@@ -11,7 +11,21 @@
     <body>
         <h1>
             <p> YESSSS, BUY A STAMP</p>
-            <button class="stampButton" id="stampButton">BUY STAMP</button>
+            <form method="POST" action="/orders">
+                <label for="name">Name:</label>
+                <input id="name" type="text" name="name" placeholder="Your Full Name" />
+                <br/>
+                <label for="address">Address:</label>
+                <input id="address" type="text" name="address" placeholder="Address" />
+                <br/>
+                <label for="email">Email:</label>
+                <input id="email" type="text" name="email" placeholder="Email" />
+                <br/>
+                <label for="phone">Phone#:</label>
+                <input id="phone" type="text" name="phone" placeholder="(###) ###-####" />
+                <br/>
+                <input type="submit" value="BUY"/>
+            </form>
         </h1>
     </body>
     <footer>
