@@ -1,3 +1,4 @@
+const { render } = require('ejs');
 const express = require('express');
 const app = express();
 const PORT = 8080;
@@ -14,7 +15,7 @@ app.get("/", (req, res) => {
     res.render("home",model);
 })
 app.get("/features", (req, res) => {
-    res.send("this website is for ordering hits on people");
+    res.render("features");
 })
 app.get("/features", (req, res) => {
     res.sendFile("/et.jpg");
