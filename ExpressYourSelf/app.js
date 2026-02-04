@@ -21,7 +21,7 @@ app.get("/features", (req, res) => {
     res.sendFile("/et.jpg");
 })
 app.get("/orders", (req, res) => {
-    res.render("contact");
+    res.render("buying");
 });
 app.post("/orders", (req, res) => {
     let body = req.body;

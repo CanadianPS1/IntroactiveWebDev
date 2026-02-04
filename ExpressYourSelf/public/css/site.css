@@ -5,11 +5,11 @@ h1{
     height: 80vh;
     width: 60vh;
     margin-left: 31vw;
-    margin-right: 32vw;
+    margin-right: 31vw;
     background-color: rgb(228, 148, 148);
     border-radius: 2rem;
     text-align: center;
-    padding: 1vw
+    padding: 1vw;
 }
 .title{
     font-size: 3rem;
@@ -18,10 +18,11 @@ header{
     text-align: center;
     background-color: rgb(168,168,216);
     margin-left: 31vw;
-    margin-right: 31vw;
+    margin-right: 35vw;
     margin-top: 3vh;
     border-radius: 1rem;
     padding-top: 2vh;
+    padding-right: 0.5vh;
 }
 .stampButton{
     height: 4vh;
@@ -33,4 +34,7 @@ header{
     margin-top: 5rem;
     box-shadow:rgb(64, 59, 59);
     bottom: 0;
+}
+.stampImage{
+    height: 50vh;
 }
