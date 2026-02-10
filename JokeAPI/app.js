@@ -7,15 +7,15 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded());
 app.get("/", (req, res) => {
-    res.render("home",model);
+    res.render("home");
 })
 app.get("/jokes", (req, res) => {
     res.render("jokes");
 })
 app.get("/create_joke", (req, res) => {
-    res.render("create_joke")
+    res.render("createJoke")
 })
-app.post("/create_jokes", (req, res) => {
+app.post("/create_joke", (req, res) => {
     let questionAndAnswer = req.body.questionAndAnswer;
     let question = req.body.question;
     let answer = req.body.answer;
