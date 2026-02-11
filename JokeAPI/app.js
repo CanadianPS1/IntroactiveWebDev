@@ -27,25 +27,10 @@ app.post("/create_joke", (req, res) => {
     if(questionAndAnswer && question != "" && answer != "" && generalJoke == ""){
         const fs = require('fs');
         res.redirect("/");
-        let orderData = `{ "${name}sOrder" : [` +
-                        `{ "name": "${name}"}, { "address": "${address}"},` +
-                        `{ "email": "${email}"}, { "phone": "${phone}"}]}`;
-        const jsonData = JSON.stringify(orderData, null, 2);
-        fs.writeFile(`${name}sOrder`, jsonData, 'utf8', (err) => {
-            if(err) console.error('Error writing to file', err);
-            else console.log('Data written to file');
-        });
+        
     }else if(!questionAndAnswer && question == "" && answer == "" && generalJoke != ""){
         const fs = require('fs');
         res.redirect("/");
-        let Jokes = `{ "${name}sOrder" : [` +
-                        `{ "name": "${name}"}, { "address": "${address}"},` +
-                        `{ "email": "${email}"}, { "phone": "${phone}"}]}`;
-        const jsonData = JSON.stringify(orderData, null, 2);
-        fs.writeFile(`${name}sOrder`, jsonData, 'utf8', (err) => {
-            if(err) console.error('Error writing to file', err);
-            else console.log('Data written to file');
-        });
     }else{
         res.redirect("/create_joke");
     }
