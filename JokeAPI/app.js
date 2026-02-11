@@ -42,9 +42,7 @@ app.post("/create_joke", (req, res) => {
         else if(jokeType == "generalJoke") generalJokes.push(generalJoke);
         else if(jokeType == "generalerJoke") generalerJokes.push(generalJoke);
         res.redirect("/");
-    }else{
-        res.redirect("/create_joke");
-    }
+    }else res.redirect("/create_joke");
 });
 app.listen(PORT, () => {
     console.log("espress running on pork:" + PORT);
