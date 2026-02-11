@@ -21,7 +21,7 @@ var generalJokes = ["Whys the Grinch so GREEEEN : because he ate all the green j
 var generalerJokes = ["Whats the deal with the my SSD : Like whhyyyyyys it sooo solllidd",
                         "General. . . the casultys have been massive, we've lost over 70% of our troups",
                         "DAMN!!! whats the state of the field?",
-                        "we're being pushed back, if this keeps up theyll be at Newyork by 23000",
+                        "we're being pushed back, if this keeps up theyll be at New York by 23000",
                         "*Smashes fist on tabel* call the troups back... we'll defend at Philly, we should be able to regroup and push them back from their."
 ]
 app.get("/", (req, res) => {
