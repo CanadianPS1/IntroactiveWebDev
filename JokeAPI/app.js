@@ -10,7 +10,8 @@ var leagueJokes = ["Im moving as Fast as I can!!!",
                     "Im Zack", 
                     "Jhin, in the big two six", 
                     "Misttaaaa YIIII",
-                    "What did the risky gambit say to Majiah : You cost 1150 more gold then me"
+                    "What did the risky gambit say to Majiah : You cost 1150 more gold then me",
+                    "why so serius ?XD"
 ]
 var generalJokes = ["Whys the Grinch so GREEEEN : because he ate all the green juice",
                     "October 6th 2032, Car Accident.",
@@ -28,15 +29,31 @@ app.get("/", (req, res) => {
     res.render("home");
 })
 app.get("/jokes", (req, res) => {
-    res.render("jokes");
+    //res.sendFile(__dirname + '/jokes.ejs');
+    let jokeFromDb = "Im the Grinch";
+    let model = {
+        joke: jokeFromDb
+    };
+    res.render("jokes", model);
+})
+app.post("/jokes", (req, res) => {
+    let jokeType = req.body.jokeType
+    let jokeFromDb = "";
+    if(jokeType == "league") jokeFromDb = leagueJokes[Math.floor(Math.random() * leagueJokes.length)];
+    else if(jokeType == "general") jokeFromDb = generalJokes[Math.floor(Math.random() * generalJokes.length)];
+    else if(jokeType == "generaler") jokeFromDb = generalerJokes[Math.floor(Math.random() * generalerJokes.length)];
+    let model = {
+        joke: jokeFromDb
+    };
+    res.render("jokes",model);
 })
 app.get("/create_joke", (req, res) => {
     res.render("createJoke")
 })
 app.post("/create_joke", (req, res) => {
-    let generalJoke = req.body.generalJoke;
-    let jokeType = req.body.jokeType;
-    console.log("General Joke: " + generalJoke);
+    let generalJoke = req.body.joke;
+    let jokeType = req.body.JokeType;
+    console.log(jokeType + ": " + generalJoke);
     if(generalJoke != ""){
         if(jokeType == "leagueJoke") leagueJokes.push(generalJoke);
         else if(jokeType == "generalJoke") generalJokes.push(generalJoke);

@@ -2,14 +2,29 @@
 <html>
     <head>
         <title>REAL JOKES</title>
-        <link rel="stylesheet" href="../css/site.css">
+        <link rel="stylesheet" href="../css/jock.css">
     </head>
     <header>
-        <h1>heres my jock. . .</h1>
+        <h1>
+            heres my jock. . .
+        </h1>
     </header>
     <body>
-        <div>
-            why so serius ?XD
+        <div class="jokeBox">
+            <form class="joke" method="POST" action="/jokes">
+                <input class="joke" type="submit" value="General Joke"/>
+                <br>
+                <input class="joke" type="submit" value="League of Legends Joke"/>
+                <br>
+                <input class="joke" type="submit" value="Generaler Joke"/>
+                <br>
+            </form>
+            <div id="jokeText" class="joke">
+                <%= joke %>
+            </div>
+            <a href="/">
+                <button class="joke">HOME</button>
+            </a>
         </div>
     </body>
     <footer>
