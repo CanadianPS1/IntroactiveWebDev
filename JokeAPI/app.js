@@ -37,7 +37,7 @@ app.get("/jokes", (req, res) => {
     res.render("jokes", model);
 })
 app.post("/jokes", (req, res) => {
-    let jokeType = req.body.jokeType
+    let jokeType = req.body.JokeType;
     let jokeFromDb = "";
     if(jokeType == "league") jokeFromDb = leagueJokes[Math.floor(Math.random() * leagueJokes.length)];
     else if(jokeType == "general") jokeFromDb = generalJokes[Math.floor(Math.random() * generalJokes.length)];

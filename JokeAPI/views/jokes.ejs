@@ -12,11 +12,13 @@
     <body>
         <div class="jokeBox">
             <form class="joke" method="POST" action="/jokes">
-                <input class="joke" type="submit" value="General Joke"/>
-                <br>
-                <input class="joke" type="submit" value="League of Legends Joke"/>
-                <br>
-                <input class="joke" type="submit" value="Generaler Joke"/>
+                <label class="joke" for="Type">Joke Type:</label>
+                <select class="joke" name="JokeType" id="JokeType">
+                    <option class="jokeOption" value="general">General Joke</option>
+                    <option class="jokeOption" value="league">League of Legneds</option>
+                    <option class="jokeOption" value="generaler">Generaler Joke</option>
+                </select>
+                <input class="joke" type="submit" value="Get Joke"/>
                 <br>
             </form>
             <div id="jokeText" class="joke">
