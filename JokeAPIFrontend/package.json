@@ -1,0 +1,23 @@
+{
+  "name": "jokeapi",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "axios": "^1.13.5",
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "fs": "^0.0.1-security",
+    "nodemon": "^3.1.11",
+    "xml": "^1.0.1",
+    "xmlhttp": "^0.0.0",
+    "xmlhttprequest": "^1.8.0"
+  }
+}

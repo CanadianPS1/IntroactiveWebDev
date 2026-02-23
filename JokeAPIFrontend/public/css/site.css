@@ -1,0 +1,46 @@
+*{
+    background-color: rgb(54, 53, 53);
+}
+header{
+    padding-top: 10vh;
+    background-color: rgb(54, 53, 53);
+}
+h1{
+    text-align: center;
+    font-size: 2rem;
+    font-family: cursive;
+    border-radius: 1rem;
+    background-color: coral;
+    padding-top: 2vh;
+    padding-bottom: 1.5vh;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+p{
+    background-color: inherit;
+}
+.jokeBox{
+    text-align: center;
+    border-radius: 1rem;
+    background-color: coral;
+    height: 70vh;
+    width: 39vw;
+    margin-left: 30vw;
+    margin-top: 10vh;
+    margin-bottom: 30vh;
+    padding-top: 10vh;
+    
+}
+.joke{
+    background-color: coral;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-size: 2rem;
+    font-family: cursive;
+    border-radius: 1rem;
+}
+.jokeOption{
+    background-color: coral;
+}
