@@ -33,21 +33,23 @@ app.post("/create_joke", (req, res) => {
         if(jokeType == "leagueJoke") leagueJokes.push(generalJoke);
         else if(jokeType == "generalJoke") generalJokes.push(generalJoke);
         else if(jokeType == "generalerJoke") generalerJokes.push(generalJoke);
-        res.redirect("/");
-    }else res.redirect("http://www.localhost:8080/create_joke");
+        res.json({status: "ok",
+                "success": "yes"
+                });
+    }else res.json({status: "ok",
+                "success": "no"
+                });
 })
 app.post("/get_joke", (req, res) => {
     try{
-        let jokeType = req.body.JokeType;
+        let jokeType = req.body.message + "";
         let jokeFromDb = "";
         if(jokeType == "league") jokeFromDb = leagueJokes[Math.floor(Math.random() * leagueJokes.length)];
         else if(jokeType == "general") jokeFromDb = generalJokes[Math.floor(Math.random() * generalJokes.length)];
         else if(jokeType == "generaler") jokeFromDb = generalerJokes[Math.floor(Math.random() * generalerJokes.length)];
-        let model = {
-            joke: jokeFromDb
-        };
-        Response.body = model;
-        Response.ok;
+        res.json({status: "ok",
+                "joke": jokeFromDb
+                });
     }catch(err){
         console.error("SERVER ERROR:", err);
         res.status(500).json({ error: err.message });

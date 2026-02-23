@@ -20,10 +20,23 @@ app.get("/jokes", (req, res) => {
 })
 app.post("/jokes", async (req, res) => {
     try{
-        const response = await axios.post("http://localhost:8081/get_joke",{JokeType: req.body.JokeType});
-        console.log(response.data);
-        res.json(response.data);
-
+        let jokeFromDb = ""
+        let jokeType = req.body.JokeType;
+        fetch("http://localhost:8081/get_joke", {
+            method: "POST",
+            headers: {"Content-Type": "application/json",
+                "Joke-Request": "frontEnd"},
+            body: JSON.stringify({message: jokeType})
+        })
+        .then(res => res.json())
+        .then(data => {
+            jokeFromDb = data.joke + "";
+            console.log(jokeFromDb)
+            let model = {
+                joke: jokeFromDb
+            };
+            res.render("jokes", model);
+        });;
     }catch(err){
         console.error(err);
         res.status(500).send("Error fetching joke");
@@ -32,16 +45,33 @@ app.post("/jokes", async (req, res) => {
 app.get("/create_joke", (req, res) => {
     res.render("createJoke")
 })
-app.post("/create_joke", (req, res) => {
-    let generalJoke = req.body.joke;
-    let jokeType = req.body.JokeType;
-    console.log(jokeType + ": " + generalJoke);
-    if(generalJoke != ""){
-        if(jokeType == "leagueJoke") leagueJokes.push(generalJoke);
-        else if(jokeType == "generalJoke") generalJokes.push(generalJoke);
-        else if(jokeType == "generalerJoke") generalerJokes.push(generalJoke);
-        res.redirect("/");
-    }else res.redirect("/create_joke");
+app.post("/create_joke", async (req, res) => {
+    try{
+        let joke = req.body.joke;
+        let jokeType = req.body.JokeType;
+        fetch("http://localhost:8081/create_joke", {
+            method: "POST",
+            headers: {"Content-Type": "application/json",
+                "Joke-Create": "frontEnd"},
+            body: JSON.stringify({jokeType: jokeType,
+                                joke: joke
+                                })
+        })
+        .then(res => res.json())
+        .then(data => {
+            jokeFromDb = data.success + "";
+            console.log(jokeFromDb)
+            if(jokeFromDb == "yes"){
+               res.render("home"); 
+            }else if(jokeFromDb == "no"){
+                res.render("createJoke");
+            }
+            
+        });;
+    }catch(err){
+        console.error(err);
+        res.status(500).send("Error fetching joke");
+    }
 });
 app.listen(PORT, () => {
     console.log("espress running on pork:" + PORT);
