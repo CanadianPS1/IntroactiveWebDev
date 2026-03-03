@@ -1,0 +1,43 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(66, 66, 66);
+    color: antiquewhite;
+}
+h1{
+    background-color: rgb(78, 140, 233);
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    font-size: 7vh;
+}
+.whitespace{
+    background-color: rgb(78, 140, 233);
+    padding-left: 20vw;
+    padding-top: 10vh;
+    padding-bottom: 100vh;
+}
+.posts{
+    text-align: center;
+}
+.postTitle{
+    margin: 0;
+    padding-top: 0;
+    margin-left: 15vw;
+    font-size: 5vh;
+}
+.post{
+    margin-left: 3vw;
+    padding-top: 5vh;
+    width: 25vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-bottom: 30vh;
+    white-space: normal;
+}
+.postButton{
+    margin-left: 3vw;
+    border-bottom-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    height: 5vh;
+    width: 15vw;
+}
