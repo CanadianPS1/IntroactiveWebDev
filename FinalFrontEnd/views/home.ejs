@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Soggy Bloggy</title>
+        <link rel="stylesheet" href="../css/site.css">
+    </header>
+    <head>
+        <h1>Did someone say BLOG?</h1>
+    </head>
+    <body>
+        <div>
+            <div class="whitespace" >
+                <form class="postBox" method="POST" action="/">
+                    <textarea class="post" id="post" type="text" name="post" placeholder="Type your Post"></textarea>
+                    <br/>
+                    <input class="postButton" type="submit" value="CREATE"/>
+                </form>
+            </div>
+            <div class="posts">
+                <div class="postTitle">POSTS?</div>
+                <div> 
+                    <% posts.forEach(post => { %>
+                    <div class="indivisulePost"><%= post %></div>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

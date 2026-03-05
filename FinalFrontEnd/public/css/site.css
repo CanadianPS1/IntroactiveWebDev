@@ -1,0 +1,72 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(66, 66, 66);
+    color: antiquewhite;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    background-color: rgb(78, 140, 233);
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    font-size: 7vh;
+}
+.whitespace{
+    height: 100%;
+    width: 20vw;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    background-color: rgb(78, 140, 233);
+}
+.posts{
+    margin-top: 4vh;
+    vertical-align: top;
+    text-align: center;
+}
+.postTitle{
+    margin: 0;
+    padding-top: 0;
+    margin-left: 15vw;
+    font-size: 5vh;
+}
+
+.postBox{
+    background-color:rgb(78, 140, 233);
+    display: block;
+    margin-top: 30vh;
+}
+.post{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    margin-left: 3vw;
+    padding-top: 5vh;
+    width: 25.4vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-bottom: 30vh;
+    white-space: normal;
+}
+.postButton{
+    margin-left: 3vw;
+    border-bottom-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    height: 5vh;
+    width: 15vw;
+}
+.indivisulePost{
+    border-radius: 0.5rem;
+    margin-top: 5vh;
+    padding-top: 4vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 4vh;
+    margin-left: 35%;
+    margin-right: 20%;
+    font-size: 3vh;
+    background-color: rgb(95, 95, 95);
+}
